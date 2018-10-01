@@ -1,0 +1,18 @@
+{
+  "description": "", 
+  "name": "", 
+  "spec": [
+    {
+      "question_description": "float survey", 
+      "min": 0, 
+      "default": 1.065, 
+      "max": 100, 
+      "required": true, 
+      "choices": "", 
+      "new_question": true, 
+      "variable": "my_float", 
+      "question_name": "My float", 
+      "type": "float"
+    }
+  ]
+}

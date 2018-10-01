@@ -1,0 +1,18 @@
+{
+  "description": "", 
+  "name": "", 
+  "spec": [
+    {
+      "question_description": "multi-choice single select", 
+      "min": null, 
+      "default": "b", 
+      "max": null, 
+      "required": true, 
+      "choices": "a\nb\nc", 
+      "new_question": true, 
+      "variable": "my_multi_choice_single_select", 
+      "question_name": "My multi-choice single-select", 
+      "type": "multiplechoice"
+    }
+  ]
+}

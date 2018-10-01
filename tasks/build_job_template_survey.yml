@@ -1,0 +1,25 @@
+---
+- name: "Initialize empty Ansible Tower job template survey specification"
+  set_fact:
+    tower_survey: []
+
+# Build survey spec for job template
+- name: "Build Ansible Tower job template specification | {{ job_template.job_template_name }}"
+  include_tasks: "build_survey_spec.yml"
+  with_items: "{{ job_template.survey }}"
+  loop_control:
+    loop_var: "survey_field"
+    label: "{{ survey_field.variable }}"
+  when: "job_template.survey | length > 0"
+
+# Get current survey
+
+# Update survey spec when not in desired state if different than existing
+- name: "Format Ansible Tower Survey"
+  set_fact:
+    tower_survey_formatted: {description: "", name: "", spec: "{{ tower_survey }}"}
+
+- debug:
+    var: "{{ tower_survey_formatted | to_nice_json }}"
+
+# Ensure survey is enabled
