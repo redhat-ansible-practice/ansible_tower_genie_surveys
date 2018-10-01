@@ -9,7 +9,7 @@ tower_surveys:
   - job_template_name: "testing"
     job_template_survey_enabled: True #True|False
     survey:
-      - type: "float" #float|integer|multiple-choice-multiple|multiple-choice-single|password|text-area|text
+      - type: "float" #float|integer|multiselect|multiplechoice|password|textarea|text
         #params different for each type
         prompt: "float1"
         description: "my float 1"
@@ -21,3 +21,55 @@ tower_surveys:
         default: "5.0"
         variable: "float2"
         required: False
+      - type: "integer"
+        prompt: "int1"
+        description: "whole number between 1 and 5"
+        min: "1"
+        max: "5"
+        variable: "int1"
+        default: "1"
+        required: True
+      - type: "multiselect"
+        prompt: "multi1"
+        default:
+          - "item1"
+          - "item3"
+        choices:
+          - "item1"
+          - "item2"
+          - "item3"
+        variable: "multi1"
+        required: True
+      - type: "multiplechoice"
+        prompt: "multi2"
+        default: "item3"
+        choices:
+          - "item1"
+          - "item2"
+          - "item3"
+        variable: "multi2"
+        required: False
+      - type: "textarea"
+        description: "test textarea1"
+        prompt: "area1"
+        default: |
+          some multi-line text
+          to consider as a value
+        variable: "area1"
+        required: True
+      - type: "textarea"
+        prompt: "area2"
+        default: "another\nway\nto\nprovide\ntext\nin\na\narea"
+        variable: "area2"
+        required: True
+      - type: "text"
+        prompt: "text1"
+        default: "some text"
+        variable: "text1"
+        required: False
+      - type: "password"
+        prompt: "pass1"
+        variable: "pass1"
+        max: "500"
+        min: "10"
+        required: True
