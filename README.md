@@ -1,4 +1,22 @@
 # genie-surveys
+## Table of Contents
+- [Description](#description)
+- [Variables](#variables)
+	- [Variable `tower_surveys` Dictionary Specificaiton](#variable-towersurveys-dictionary-specificaiton)
+		- [`survey` Dictionary](#survey-dictionary)
+			- [Common Keys for `survey` Dictionaries](#common-keys-for-survey-dictionaries)
+			- [Type float Keys](#type-float-keys)
+			- [Type integer Keys](#type-integer-keys)
+			- [Type multiselect Keys](#type-multiselect-keys)
+			- [Type multiplechoice Keys](#type-multiplechoice-keys)
+			- [Type password Keys](#type-password-keys)
+			- [Type textarea Keys](#type-textarea-keys)
+			- [Type text Keys](#type-text-keys)
+- [Playbook Examples](#playbook-examples)
+	- [Normal Role Definition in Play](#normal-role-definition-in-play)
+	- [Import Role in Task](#import-role-in-task)
+- [Author](#author)
+
 ## Description
 An Ansible Role to deploy and ensure job template surveys are in a desired state in Ansible Tower.
 ## Variables
@@ -44,7 +62,7 @@ Based on the type of survey field, different dictionary keys are required, which
 |`default`|no|The survey field's default/pre-filled value that the end-user will see when executing the job template.|string (on type multiselect this is a list, and on type password this is not available because Ansible Tower stores the value encrypted and it becomes "$encrypted$" in the stored specification and unable to ensure the values match the desired state otherwise)|
 |`required`|Whether or not the end-user is required to enter data into the survey field when executing the job template|boolean|
 
-###### Type float
+##### Type float Keys
 A numeric value with a floating decimal point.
 
 |Key Name|Required|Default Value|Description|Type|
@@ -52,7 +70,7 @@ A numeric value with a floating decimal point.
 |min|no|0|Minimum value accepted|float|
 |max|no|100|Maximum value accepted|float|
 
-###### Type integer
+##### Type integer Keys
 An integer value.
 
 |Key Name|Required|Default Value|Description|Type|
@@ -60,21 +78,21 @@ An integer value.
 |min|no|0|Minimum value accepted.|integer|
 |max|no|100|Maximum value accepted.|integer|
 
-###### Type multiselect
+##### Type multiselect Keys
 A multiple-choice multiple-select (Ansible Tower converts this to a list).
 
 |Key Name|Required|Default Value|Description|Type|
 |---|:---:|:---:|---|---|
 |choices|yes|n/a|List of choices to present the end-user with when executing the job template|list|
 
-###### Type multiplechoice
+##### Type multiplechoice Keys
 A multiple-choice single-select (Ansible Tower converts this to a string).
 
 |Key Name|Required|Default Value|Description|Type|
 |---|:---:|:---:|---|---|
 |choices|yes|n/a|List of choices to present the end-user with when executing the job template.|list|
 
-###### Type password
+##### Type password Keys
 A password that Ansible Tower encrypts.  It is handled differently than a text type.
 
 |Key Name|Required|Default Value|Description|Type|
@@ -82,7 +100,7 @@ A password that Ansible Tower encrypts.  It is handled differently than a text t
 |min|no|0|Minimum number of characters accepted in the survey field.|integer|
 |max|no|32|Maximum number of characters accepted in the survey field.|integer|
 
-###### Type textarea
+##### Type textarea Keys
 A field to enter multi-lined text.
 
 |Key Name|Required|Default Value|Description|Type|
@@ -90,7 +108,7 @@ A field to enter multi-lined text.
 |min|no|0|Minimum number of characters accepted in the survey field.|integer|
 |max|no|4096|Maximum number of characters accepted in the survey field.|integer|
 
-###### Type text
+##### Type text Keys
 A field to enter text (string).
 
 |Key Name|Required|Default Value|Description|Type|
