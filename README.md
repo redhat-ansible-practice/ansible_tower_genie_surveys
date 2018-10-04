@@ -192,7 +192,7 @@ A field to enter text (string).
     - "vars/myvault.yml"
   tasks:
     - name: "Build my job template surveys"
-      import_role:
+      include_role:
         name: "genie-survey"
       vars:
         tower_url: "https://mytower.mydomain.com"
