@@ -52,11 +52,11 @@ tower_surveys:
 #### `survey` Dictionary
 Based on the type of survey field, different dictionary keys are required, which are described below.
 
-##### Common Keys for `survey` Dictionaries
+##### Common Keys for `survey` Dictionaries  
 These are valid for any of the "type" key values described in the next section.  
 
 |Key Name|Required|Description|Type|
-|---|:---:|---|
+|---|:---:|---|---|
 |`variable`|yes|The variable to map the end-user's survey response to when executing the job template.|string|
 |`prompt`|yes|The survey field label that the end-user will see when executing the job template.|string|
 |`type`|yes|The type of survey field to generate in the job template's survey.  The value can be one of the following: float, integer, multiselect, multiplechoice, password, textarea, text|string|
