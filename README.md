@@ -2,7 +2,7 @@
 ## Table of Contents
 - [Description](#description)
 - [Variables](#variables)
-	- [Variable `tower_surveys` Dictionary Specificaiton](#variable-towersurveys-dictionary-specificaiton)
+	- [Variable `tower_surveys` Dictionary Specification](#variable-towersurveys-dictionary-specification)
 		- [`survey` Dictionary](#survey-dictionary)
 			- [Common Keys for `survey` Dictionaries](#common-keys-for-survey-dictionaries)
 			- [Type float Keys](#type-float-keys)
@@ -29,7 +29,7 @@ An Ansible Role to deploy and ensure job template surveys are in a desired state
 |`tower_pass`|""|yes|Tower Admin User's password on the Ansible Tower Server.  This should be stored in an Ansible Vault at vars/tower-secrets.yml or elsewhere and called from a parent playbook.|string|
 |`tower_surveys`|[]|yes|Ansible Tower survey definitions|List of dictionaries|
 
-### Variable `tower_surveys` Dictionary Specificaiton
+### Variable `tower_surveys` Dictionary Specification
 The `tower_surveys` skeleton structure is as follows:  
 *Collapsed YAML:*
 ```yaml
@@ -53,6 +53,8 @@ tower_surveys:
 Based on the type of survey field, different dictionary keys are required, which are described below.
 
 ##### Common Keys for `survey` Dictionaries
+These are valid for any of the "type" key values described in the next section.
+
 |Key Name|Required|Description|Type|
 |---|:---:|---|
 |`variable`|yes|The variable to map the end-user's survey response to when executing the job template.|string|
