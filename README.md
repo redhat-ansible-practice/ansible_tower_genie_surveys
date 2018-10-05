@@ -53,7 +53,7 @@ tower_surveys:
 Based on the type of survey field, different dictionary keys are required, which are described below.
 
 ##### Common Keys for `survey` Dictionaries
-These are valid for any of the "type" key values described in the next section.
+These are valid for any of the "type" key values described in the next section.  
 
 |Key Name|Required|Description|Type|
 |---|:---:|---|
