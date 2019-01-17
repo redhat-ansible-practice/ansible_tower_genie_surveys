@@ -1,4 +1,4 @@
-# genie-surveys
+# ansible-tower-genie-surveys
 ## Table of Contents
 - [Description](#description)
 - [Variables](#variables)
