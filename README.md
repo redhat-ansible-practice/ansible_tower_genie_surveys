@@ -1,4 +1,4 @@
-# ansible-tower-genie-surveys
+# ansible_tower_genie_surveys
 ## Table of Contents
 - [Description](#description)
 - [Variables](#variables)
@@ -128,7 +128,7 @@ A field to enter text (string).
   vars_files:
     - "vars/myvault.yml"
   roles:
-    - role: "genie-survey"
+    - role: "ansible_tower_genie_surveys"
       tower_url: "https://mytower.mydomain.com"
       tower_verify_ssl: False
       tower_secrets: False
