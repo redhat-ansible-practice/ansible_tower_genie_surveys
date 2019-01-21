@@ -251,7 +251,8 @@ A field to enter text (string).
                 min: "10"
                 max: "25"
 ```
-
+## License
+[MIT](LICENSE)
 
 ## Author
-[Andrew J. Huffman](mailto:ahuffman@redhat.com)
+[Andrew J. Huffman](https://github.com/ahuffman)
